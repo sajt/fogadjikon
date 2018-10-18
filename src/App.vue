@@ -2,15 +2,17 @@
   <div class="container">
     <div class="section">
       <!--   Icon Section   -->
+      <input type="number" v-model="fontSize">
+      <input type="color" v-model="color">
       <div class="row">
-        <div>
           <div id="app">
             <div v-for="icon in icons" :key="icon" style="float: left" class="col s12 m4">
-              <span class="icon" :class="'flaticon-' + icon"></span>
+              <span
+                  :class="'flaticon-' + icon"
+                  :style="'font-size: ' + fontSize + 'px; color: ' + color"></span>
               <p>{{ icon }}</p>
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
@@ -56,7 +58,9 @@ export default {
          'animal',
          'siberian-husky',
          'pet-grooming',
-      ]
+      ],
+      fontSize: 48,
+      color: 'black'
     }
   }
 }
@@ -94,7 +98,7 @@ export default {
   font-family: Flaticon;
   font-style: normal;
 }
-.icon { font-size: 48px }
+
 .flaticon-two-dog-pawprints:before { content: "\f100"; }
 .flaticon-face-of-staring-dog:before { content: "\f101"; }
 .flaticon-credit-card-1:before { content: "\f102"; }
