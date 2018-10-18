@@ -1,5 +1,7 @@
 # fogadjikon
 
+List of icons for Petencia WordpPress theme
+
 ## Project setup
 ```
 yarn install
